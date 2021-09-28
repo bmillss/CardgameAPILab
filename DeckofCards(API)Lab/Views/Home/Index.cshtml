@@ -1,0 +1,19 @@
+﻿@model Cards.FiveCardDraw
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <tbody>
+        @foreach (Hand.DrawResultsCard cards in Model)
+        {
+            <tr>
+                <td>@cards.image</td>
+                <td>@cards.value</td>
+                <td>@cards.suit</td>S
+                <td>
+                    <a asp-action="NewCards" class="btn btn-danger">Draw New Cards</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
